@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphing Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Graphing Calculator</h1>
+        </header>
+        
+        <div class="main-content">
+            <aside class="sidebar">
+                <div class="input-section">
+                    <h2>Functions</h2>
+                    <div class="function-input-group">
+                        <input type="text" id="functionInput" placeholder="e.g., x^2, sin(x), 2*x + 1" />
+                        <button id="addFunction">Add Function</button>
+                    </div>
+                    <div id="errorMessage" class="error-message"></div>
+                </div>
+                
+                <div class="functions-list">
+                    <h3>Active Functions</h3>
+                    <div id="functionsList"></div>
+                </div>
+                
+                <div class="controls">
+                    <h3>Controls</h3>
+                    <button id="resetView">Reset View</button>
+                    <button id="clearAll">Clear All</button>
+                    <div class="control-info">
+                        <p><strong>Pan:</strong> Click and drag</p>
+                        <p><strong>Zoom:</strong> Mouse wheel</p>
+                    </div>
+                </div>
+            </aside>
+            
+            <main class="graph-container">
+                <canvas id="graphCanvas"></canvas>
+            </main>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.11.0/math.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
